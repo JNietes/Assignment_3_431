@@ -28,6 +28,16 @@ Given lambda expressions A and B, show a lambda expression for
 Simplify (i.e. apply any feasible Beta-reduction) as much as possible.
 Hint: What is ‘implies’ in terms of not/or?
 Of course, you may use whatever is relevant from the CLASS 18 slides.
+From slides:
+    true = \x.\y.x
+    false = \x.\y.y
+
+Answer:
+    Where T = true
+    implies = (\a.\b.a b T) 
+    not = (\a.\x.\y.a y x)
+So A implies (not B) =
+    (\A.\B.A (\B.\x.\y.B y x) T)
 
 ///////////////////////////////////////////////////////////////////////////////
 Problem 3
@@ -62,11 +72,11 @@ Problem 5
 Author: Derrick
 
 Prove, by structural induction, that indeed the shown code, in CLASS 20 slides, implies
-rev ( inorder ( reflect x ) ) = inorder x (* rev for lists *)
+    rev ( inorder ( reflect x ) ) = inorder x (* rev for lists *)
 
 ///////////////////////////////////////////////////////////////////////////////
 Problem 6
 Author: Derrick
 
 Prove, by structural induction, that indeed the shown code implies
-postorder ( reflect x ) = rev ( preorder x )
+    postorder ( reflect x ) = rev ( preorder x )
