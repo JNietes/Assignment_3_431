@@ -29,13 +29,13 @@ Simplify (i.e. apply any feasible Beta-reduction) as much as possible.
 Hint: What is ‘implies’ in terms of not/or?
 Of course, you may use whatever is relevant from the CLASS 18 slides.
 From slides:
-    true = \x.\y.x
-    false = \x.\y.y
+    true = (\x.\y.x)
+    false = (\x.\y.y)
+    not E = E (\x.\y.y) (\x.\y.x)
 
 Answer:
     Where T = true
     implies = (\a.\b.a b T) 
-    not = (\a.\x.\y.a y x)
 So A implies (not B) =
     (\A.\B.A (\B.\x.\y.B y x) T)
 
