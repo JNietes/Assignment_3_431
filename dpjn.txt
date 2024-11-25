@@ -20,7 +20,7 @@ Class_18_27-8
 
 ///////////////////////////////////////////////////////////////////////////////
 Problem 2
-Author: Joaquin
+Author: Derrick
 
 Given lambda expressions A and B, show a lambda expression for
     A implies (not B)
@@ -52,7 +52,7 @@ Of course, you may use whatever is relevant from the CLASS 18 slides.
 
 ///////////////////////////////////////////////////////////////////////////////
 Problem 4
-Author: Derrick
+Author: Joaquin
 
 Define a subset S of Z2 = Z x Z (=the set of all pairs of negative, zero, positive integers) by the
 following rules:
