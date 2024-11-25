@@ -22,18 +22,51 @@ Class_18_27-8
 Problem 2
 Author: Joaquin
 
+Given lambda expressions A and B, show a lambda expression for
+    A implies (not B)
+
+Simplify (i.e. apply any feasible Beta-reduction) as much as possible.
+Hint: What is ‘implies’ in terms of not/or?
+Of course, you may use whatever is relevant from the CLASS 18 slides.
+
 ///////////////////////////////////////////////////////////////////////////////
 Problem 3
 Author: Joaquin
+
+Given lambda expressions A and B, show a lambda expression for
+    A XOR B (A exclusive-OR B)
+
+Simplify (i.e. apply any feasible Beta-reduction) as much as possible.
+Hint: What is ‘exclusive-OR’ in terms of or/and/not/and?
+Of course, you may use whatever is relevant from the CLASS 18 slides.
 
 ///////////////////////////////////////////////////////////////////////////////
 Problem 4
 Author: Derrick
 
+Define a subset S of Z2 = Z x Z (=the set of all pairs of negative, zero, positive integers) by the
+following rules:
+    (a) (3,2) <- S
+    (b) if (x,y) <- S, then (3x – 2y, x) <- S
+Prove, by structural induction, that every element of S looks in fact like ( 2n+1 + 1, 2n + 1 ).
+
+In my CLASS 20 slides, a binary tree type is defined by the variant
+    type 'a btree = Empty | Node of 'a * 'a btree * 'a btree
+(with related OCaml code; refer to that code), and a number of formulas are claimed to hold true,
+including the following
+    rev ( inorder ( reflect x ) ) = inorder x (* rev for lists *)
+    postorder ( reflect x ) = rev ( preorder x )
+
 ///////////////////////////////////////////////////////////////////////////////
 Problem 5
 Author: Derrick
 
+Prove, by structural induction, that indeed the shown code, in CLASS 20 slides, implies
+rev ( inorder ( reflect x ) ) = inorder x (* rev for lists *)
+
 ///////////////////////////////////////////////////////////////////////////////
 Problem 6
 Author: Derrick
+
+Prove, by structural induction, that indeed the shown code implies
+postorder ( reflect x ) = rev ( preorder x )
