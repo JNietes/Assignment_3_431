@@ -1,0 +1,19 @@
+
+Problem 1
+Author: Joaquin
+
+Given lambda expressions A and B, show a lambda expresion for:
+
+    if A then false else B
+
+A (\x\y. y) B
+
+A = true;
+(\x\y. x) (\x\y. y) B
+(\x\y. y)
+
+A = false;
+(\x\y. x) (\x\y. y) B
+B
+
+Class_18_27-8
