@@ -74,6 +74,39 @@ Author: Derrick
 Prove, by structural induction, that indeed the shown code, in CLASS 20 slides, implies
     rev ( inorder ( reflect x ) ) = inorder x (* rev for lists *)
 
+Answer:
+    Base case:
+        x = Empty
+        rev ( inorder ( reflect Empty ) ) = inorder Empty 
+
+        Prove left and right side equal each other:
+        LeftSide = rev ( inorder (reflect Empty) )
+        LeftSide = rev ( inorder Empty )
+        LeftSide = rev Empty
+        LeftSide = []
+
+        RightSide = inorder Empty
+        RightSide = []
+
+        So LeftSide = RightSide,
+        [] =[]
+
+    Induction Hypothesis:
+        let x = [0;1]
+        rev ( inorder ( reflect x ) ) = inorder x 
+
+        Prove left and right side equal each other:
+        LeftSide = rev ( inorder ( reflect x ) )
+        LeftSide = rev ( inorder ([1] @ [0]) )
+        LeftSide = rev ( [1] @ [0] )
+        LeftSide = [0] @ [1]
+
+        RightSide = inorder X
+        RightSide = [0] @ [1]
+
+        So LeftSide = Right Side,
+        [0] @ [1] = [0] @ [1] 
+
 ///////////////////////////////////////////////////////////////////////////////
 Problem 6
 Author: Derrick
@@ -97,6 +130,7 @@ Answer:
 
         So LeftSide = RightSide,
         [] = []
+
     Induction Hypothesis:
         postorder ( reflect Node(n,l,r) ) = rev ( preorder Node(n,l,r) )
 
