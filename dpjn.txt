@@ -80,3 +80,34 @@ Author: Derrick
 
 Prove, by structural induction, that indeed the shown code implies
     postorder ( reflect x ) = rev ( preorder x )
+
+Answer:
+    Base case:
+        x = Empty
+        postorder ( reflect Empty ) = rev ( preorder Empty )
+
+        Prove left and right side equal each other:
+        LeftSide = postorder ( reflect Empty )
+        LeftSide = postorder ( Empty )
+        LeftSide = []
+
+        RightSide = rev ( preorder Empty )
+        RightSide = rev []
+        RightSide = []
+
+        So LeftSide = RightSide,
+        [] = []
+    Induction Hypothesis:
+        postorder ( reflect Node(n,l,r) ) = rev ( preorder Node(n,l,r) )
+
+        Prove left and right side equal each other:
+        LeftSide = postorder ( Node (n,reflect r, reflect l) )
+        LeftSide = postorder (reflect r) @ postorder (reflect l) @ [n]
+        LeftSide = rev (preorder r) @ rev (preorder l) @ [n]
+
+        RightSide = rev ( preorder Node(n,l,r) )
+        RightSide = rev ([n] @ (preorder l) @ (preorder r))
+        RightSide = rev (preorder r) @ rev (preorder l) @ [n]
+
+        So LeftSide = Right Side, 
+        rev (preorder r) @ rev (preorder l) @ [n] = rev (preorder r) @ rev (preorder l) @ [n]
