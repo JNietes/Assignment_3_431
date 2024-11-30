@@ -50,6 +50,22 @@ Simplify (i.e. apply any feasible Beta-reduction) as much as possible.
 Hint: What is ‘exclusive-OR’ in terms of or/and/not/and?
 Of course, you may use whatever is relevant from the CLASS 18 slides.
 
+A OR B
+A (\x\y. x) B
+
+A AND B
+A B (\x\x. y)
+
+XOR Truth Table:
+BA
+00 false
+01 true
+10 true
+11 false
+
+if (A AND NOT B) OR (B AND NOT A) then true else false
+(A {B [\x\y .y][\x\y. x]} {\x\y. y}) (\x\y. x) (B {A [\x\y .y][\x\y. x]} {\x\y. y})
+
 ///////////////////////////////////////////////////////////////////////////////
 Problem 4
 Author: Joaquin
