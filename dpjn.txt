@@ -64,7 +64,10 @@ BA
 11 false
 
 if (A AND NOT B) OR (B AND NOT A) then true else false
-(A {B [\x\y .y][\x\y. x]} {\x\y. y}) (\x\y. x) (B {A [\x\y .y][\x\y. x]} {\x\y. y})
+(A {B [\x\y. y][\x\y. x]} {\x\y. y}) (\x\y. x) (B {A [\x\y .y][\x\y. x]} {\x\y. y})
+
+Beta-reduction:
+(A {B [\x\y. y][\x\y. x]} {\x\y. y}) B
 
 ///////////////////////////////////////////////////////////////////////////////
 Problem 4
